@@ -1,0 +1,178 @@
+.menu {
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        display: none;
+    }
+    &-icon {
+        width: 1.4375rem;
+        display: block;
+        position: relative;
+        z-index: 1030;
+        i {
+            height: 0.1875rem;
+            width: 100%;
+            display: block;
+            background: white;
+            box-shadow: 0px 0px 8px rgba(95, 193, 234, 0.25);
+            border-radius: 0.1875rem;
+            transition: $transition--fast;
+            &:not(:nth-child(3)) {
+                margin-bottom: 0.3125rem;
+            }
+            &:last-child {
+                @include center-item-y("absolute");
+            }
+        }
+        &[aria-expanded=true]{
+            i {
+                &:nth-child(1) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    opacity: 0;
+                }
+                &:nth-child(2) {
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(4) {
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+        }
+    }
+    &-drop {
+        // min-width: 200px;
+        padding: 0;
+        background: #1B2A4A;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        color: #fff;
+
+        margin: 0;
+        top: 0 !important;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 10.9375rem;
+
+            background: linear-gradient(180deg, #19449F 0%, rgba(25, 68, 159, 0) 105.59%);
+            mix-blend-mode: hard-light;
+            opacity: 0.77;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+    &__content {
+        padding: 1.125rem 0 1.8125rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__logo {
+        &-wrap {
+            display: flex;
+            align-items: center;
+
+        }
+        border: 0.0625rem solid #FFFFFF;
+        border-radius: 0.1875rem;
+        &-icon {
+            width: 2.5625rem;
+        }
+        &-text {
+            width: 9.4rem;
+            font-size: 0.625rem;
+            line-height: 1.2em;
+            color: #FFFFFF;
+            margin-left: 0.45rem;
+        }
+    }
+    &__tel {
+        display: block;
+        font-family: Raleway;
+        font-size: 1.25rem;
+        color: #FFFFFF;
+        margin: 1rem 0 0.8125rem;
+    }
+    &__btn {
+        width: 16.25rem;
+        line-height: 3.625rem;
+        // border-width: 0.125rem;
+        font-size: 0.875rem;
+        color: #FFFFFF;
+    }
+    &__nav {
+        padding-left: 1.75rem;
+        width: 16.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        font-family: Raleway;
+        color: #FFFFFF;
+
+        position: relative;
+        margin: 1.3rem 0 1.8rem;
+        &-link {
+            display: inline-block;
+            position: relative;
+            white-space: nowrap;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 0.125rem;
+                background: #D71D22;
+                top: 100%;
+                left: 0;
+                pointer-events: none;
+    
+                transform-origin: 100% 50%;
+                transform: scale3d(0, 1, 1);
+                transition: transform 0.3s cubic-bezier(.49,.44,.43,1);
+            }
+            &.active {
+                pointer-events: none;
+                font-weight: 500;
+                &::before {
+                    transform-origin: 0% 50%;
+                    transform: scale3d(1, 1, 1);
+                }
+            }
+        }
+    }
+    &__links {
+        width: 12.9375rem;
+        display: flex;
+        justify-content: space-between;
+        color: #019CDD;
+        svg {
+            transition: $transition--hover;
+            &:hover {
+                color: link-hover(#019CDD);
+            }
+        }
+        &-inst {width: 1.9375rem;}
+        &-yt {width: 2.5625rem;}
+        &-wa {width: 1.9375rem;}
+    }
+    &__email {
+        display: inline-block;
+        font-family: Montserrat;
+        font-size: 0.875rem;
+        text-decoration-line: underline;
+        transition: $transition--hover;
+        color: #019CDD;
+        margin-top: 0.3125rem;
+        &:hover {
+            color: link-hover(#019CDD);
+        }
+    }
+}

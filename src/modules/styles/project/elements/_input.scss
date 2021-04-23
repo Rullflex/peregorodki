@@ -1,0 +1,71 @@
+.input {
+    $self: &;
+    width: 12.5rem;
+    height: 1.5rem;
+    display: block;
+
+    background: transparent;
+    border-width: 0;
+    border-bottom-width: 0.0625rem;
+    border-style: solid;
+
+    transition: $transition--normal;
+
+    font-size: 0.8125rem;
+    
+    margin-top: -0.4rem;
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        width: 350px;
+        height: 55px;
+        border-bottom-width: 2px;
+        font-size: 27px;
+        margin-bottom: 0;
+    }
+    &:focus {}
+    &-wrap {
+        &--light {
+            #{$self} {
+                border-color: white;
+                color: white;
+                &-label {
+                    color: #62C2EB;
+                }
+            }
+        }
+        &--dark {
+            #{$self} {
+                border-color: #293B61;
+                color: #293B61;
+                &-label {
+                    color: #293B61;
+                }
+            }
+        }
+        &.has-error {
+            #{$self} {
+                border-color: #FF6660 !important;
+                &-label {
+                    color: #FF6660;
+                }
+            }
+        }
+        &.has-success {
+            #{$self} {
+                // border-color: $success !important;
+                &-label {
+                    // color: $success;
+                }
+            }
+        }
+    }
+    &-label {
+        font-weight: 500;
+        font-size: 0.5625rem;
+        line-height: 1em;
+        text-transform: uppercase;
+        transition: $transition--normal;
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            font-size: 14px;
+        }
+    }
+}

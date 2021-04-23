@@ -1,0 +1,27 @@
+mixin footer()
+    footer.footer 
+        .container 
+            .footer__row
+                a(href="/").footer__logo
+                    +icon('logo').footer__logo-icon
+                .footer__creds 
+                    .footer__creds-ooo ООО “Дели”
+                    .footer__creds-p ИНН 7719494305
+                    .footer__creds-p КПП 771901001
+                    .footer__creds-p г. Москва
+                .footer__contacts 
+                    .footer__contacts-title Контакты
+                    .footer__contacts-tel Телефон: #[a(href!=phoneLink) 8 (999) 640 6999]
+                    .footer__contacts-email Почта: #[a(href=`mailto:${mailAdress}`)!= mailAdress]
+                .footer__time 
+                    .footer__time-sm.d-lg-none Работаем круглосуточно
+                    .footer__time-lg.d-none.d-lg-block
+                        .footer__time-title Время работы
+                        .footer__time-p Круглосуточно 
+                .footer__icons 
+                    a(href!=instLink, target="_blank", rel="noopener noreferrer") 
+                        +icon('inst').footer__icons-inst
+                    a(href!=ytLink, target="_blank", rel="noopener noreferrer") 
+                        +icon('yt').footer__icons-yt
+                    a(href!=waLink, target="_blank", rel="noopener noreferrer") 
+                        +icon('wa').footer__icons-wa

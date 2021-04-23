@@ -1,0 +1,354 @@
+extends modules/layout/_layout
+
+prepend head
+	title Title your page
+	meta(name="description", content="Описание страницы")
+
+block header
+	+header()
+block footer
+	+footer()
+block content
+	main.main
+		section.s1 
+			.s1__ibg.ibg 
+				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`)
+			.container 
+				h1.s1__title Изготавливаем и&nbsp;монтируем #[span.text-primary раздвижные перегородки] по&nbsp;всей России
+				.s1__advans
+					.s1__advans-item
+						+picture(png, `${assets}s1-car`, `n`).s1__advans-img.s1__advans-img--1
+						.s1__advans-text Предоставляем#[br] #[span.text-red бесплатную]#[br] доставку в любой регион России
+					.s1__advans-item
+						+picture(png, `${assets}s1-doc`, `n`).s1__advans-img.s1__advans-img--2
+						.s1__advans-text Даём#[br] #[span.text-red 2 года]#[br] гарантии на монтаж и&nbsp;изделие
+					.s1__advans-item
+						+picture(png, `${assets}s1-shield`, `n`).s1__advans-img.s1__advans-img--3
+						.s1__advans-text Используем#[br] #[span.text-red безопасное стекло]#[br] которое не может навредить детям
+				.s1__num
+					.s1__num-one 1
+					.s1__num-zero 000
+					.s1__num-plus +
+					.s1__num-text перегородок установили
+				.s1__video-wrap 
+					.s1__video-text Посмотрите минутную#[br] видео-презентацию#[br] нашей работы
+					.btn-solid-wrap 	
+						.btn-solid-red-sub
+						a.s1__video-btn.btn.btn-solid-red(href="#video" data-uk-toggle)
+							+icon('play-btn')
+							span Смотреть
+				.s1__tour 
+					.s1__tour-wrap
+						+icon('old-camera').s1__tour-icon
+						.s1__tour-text Посмотрите 3D-тур#[br] с раздвижными перегородками
+					.btn-solid-wrap 
+						.btn-solid-primary-sub
+						a.s1__tour-btn.btn.btn-solid-primary Смотреть 3D тур
+		section.s2 
+			.container
+				.s2__title.h2 Вместе#[br.d-lg-none] выгодней
+				.s2__wrap
+					+picture(jpg, `${assets}s2-man-sm`, 'n').s2__img-man
+					.s2__block 
+						.s2__block-ibg.ibg 
+							+picture(jpg, `${assets}s2-man-lg`, 'n')
+						.s2__block-name Дёгтев Иван
+						.s2__block-pos Руководитель и основатель компании.
+					.s2__side
+						.s2__side-list
+							.s2__side-item
+								+icon('cage').s2__side-icon
+								.s2__side-point Перегородка
+							.s2__side-item
+								+icon('van').s2__side-icon
+								.s2__side-point Доставка
+							.s2__side-item 
+								+icon('stairs').s2__side-icon
+								.s2__side-point Подъём на&nbsp;этаж
+							.s2__side-item
+								img(src=`${assetsIco}drill.png` alt="").s2__side-icon
+								.s2__side-point Установка конструкции
+						.s2__side-divider 
+						.s2__side-price 125 000
+						a.s2__side-btn.btn.btn-outline-primary Получить консультацию
+		section.s3
+			.s3__container.container
+				.s3__title.h2 Раздвижные перегородки&nbsp;позволяют
+				.s3__block
+					.s3__block-title Разделить комнаты в квартире
+					.s3__block-item-wrap
+						.s3__block-item
+							.s3__block-item-ibg.ibg 
+								+picture(jpg, `${assets}s3-i1`, 'n')
+						.s3__block-item
+							.s3__block-item-ibg.ibg 
+								+picture(jpg, `${assets}s3-i2`, 'n')
+				.s3__block
+					.s3__block-title Отделить детей друг от друга
+					.s3__block-item-wrap
+						.s3__block-item
+							.s3__block-item-ibg.ibg 
+								+picture(jpg, `${assets}s3-i3`, 'n')
+						.s3__block-item
+							.s3__block-item-ibg.ibg  
+								+picture(jpg, `${assets}s3-i4`, 'n')
+				.s3__block
+					.s3__block-title Сделать перепланировку
+					.s3__block-item-wrap
+						.s3__block-item
+							.s3__block-item-ibg.ibg 
+								+picture(jpg, `${assets}s3-i5`, 'n')
+						.s3__block-item
+							.s3__block-item-ibg.ibg 
+								+picture(jpg, `${assets}s3-i6`, 'n')
+		section.s4 
+			.s4__ibg.ibg 
+				+picture('svg', `${assets}s4-bg`, 'sl')
+			.s4__container.container 
+				.s4__title.h2 Мы изготавливаем
+				.s4__set 
+					.s4__item.ibg 
+						+picture(jpg, `${assets}s4-i1`, 'n')
+						.s4__item-text Каскадные перегородки
+					.s4__item.ibg 
+						+picture(jpg, `${assets}s4-i2`, 'n')
+						.s4__item-text Одностворчатые перегородки
+					.s4__item.ibg 
+						+picture(jpg, `${assets}s4-i3`, 'n')
+						.s4__item-text Двустворчатые перегородки
+					.s4__item.ibg 
+						+picture(jpg, `${assets}s4-i4`, 'n')
+						.s4__item-text Угловые перегородки
+					.s4__item.ibg 
+						+picture(jpg, `${assets}s4-i5`, 'n')
+						.s4__item-text Классичесие перегородки
+					.s4__item.ibg 
+						+picture(jpg, `${assets}s4-i6`, 'n')
+						.s4__item-text Стационарные перегородки
+					.s4__item.ibg 
+						+picture(jpg, `${assets}s4-i7`, 'n')
+						.s4__item-text.s4__item-text--sm Индивидуальные заказы под&nbsp;нестандартные размеры
+					.s4__item.s4__item--last.ibg 
+						+picture(jpg, `${assets}s4-i8`, 'n')
+						.s4__item-text.s4__item-text--last Узнайте больше о&nbsp;видах&nbsp;раздвижных перегородок
+						a.s4__item-btn.btn.btn-outline-secondary(href="#") Посмотреть
+		section.s5 
+			.container 
+				.s5__title.h2 Подберём наиболее подходящий&nbsp;вариант покрытия
+				.s5__items 
+					.s5__item
+						.s5__item-ibg.ibg
+							+picture(jpg, `${assets}s5-i1`, 'n')
+						.s5__item-badge Эмаль
+					.s5__item
+						.s5__item-ibg.ibg
+							+picture(jpg, `${assets}s5-i2`, 'n')
+						.s5__item-badge Экошпон
+		section.s6
+			.s6__ibg.ibg 
+				+picture('svg', `${assets}s6-bg`, 'sl')
+			.s6__container.container 
+				.s6__title.h2 Этапы работ
+				.s6__subtitle Максимально удобный#[br] формат работы
+				.s6__items
+					.s6__numnav.d-none.d-lg-flex 
+						.s6__numnav-circle
+						- for(var i = 1; i <= 8; i++)
+							.s6__numnav-num= `0${i}`
+					.s6__item.s6__item-1
+						.s6__item-fnum.s6__item-fnum--right 01
+						.s6__item-fimg.s6__item-fimg--rounded.ibg
+							+picture(jpg, `${assets}s6-i1`, 'n')
+						.s6__item-title Вы оставляете заявку#[br] в WhatsApp или Instagram
+						.s6__item-descr Мы свяжемся с вами в течение часа, чтобы обсудить все детали. Среднее время ответа – #[strong 10&nbsp;минут.]
+						.s6__item-btns
+							a.s6__item-btn(href!=waLink, target="_blank", rel="noopener noreferrer") 
+								img.lazyload(src=`${assetsIco}wa.svg`, alt="")
+								span WhatsApp
+							a.s6__item-btn(href!=instLink, target="_blank", rel="noopener noreferrer") 
+								img.lazyload(src=`${assetsIco}inst.svg`, alt="")
+								span Instagram
+					.s6__item.s6__item-2
+						.s6__item-fnum 02
+						+picture(png, `${assets}s6-i2`, 'n').s6__item-fimg
+						.s6__item-title Мы сразу считаем примерную стоимость
+						.s6__item-descr Для этого нужны только размеры.#[br] Мы дадим ответ по стоимости#[br] в тот же день – чтобы вы могли прицениться и не терять #[strong 3-4] дня только на замеры
+					.s6__item.s6__item-3
+						.s6__item-fnum.s6__item-fnum--right 03
+						+picture(png, `${assets}s6-i3`, 'n').s6__item-fimg
+						.s6__item-title Наш специалист#[br] приезжает на замер
+						.s6__item-descr 
+							p Он снимет точные замеры, покажет образцы, прконсультирует и&nbsp;подскажет, как лучше поступить в&nbsp;вашей ситуации. 
+							p Стоимость замера – 1.500 рублей. Проводим замер бесплатно #[strong при&nbsp;заключении договора]
+					.s6__item.s6__item-4
+						.s6__item-fnum.s6__item-fnum--right 04
+						.s6__item-fimg.s6__item-fimg--rounded.ibg
+							+picture(jpg, `${assets}s6-i4`, 'n')
+						.s6__item-title Подписываем договор 
+						.s6__item-descr 
+							p Договор фиксирован: сумма работ#[br] и материалов не будет меняться. 
+							ul 
+								li Вы вносите 50% предоплаты. 
+								li Следующие 50% – после монтажа перегородки
+					.s6__item.s6__item-5
+						.s6__item-fnum 05
+						.s6__item-fimg.s6__item-fimg--rounded.ibg
+							+picture(jpg, `${assets}s6-i5`, 'n')
+						.s6__item-title Изготавливаем#[br] перегородку
+						.s6__item-descr Перегородку из шпоны#[br] изготавливаем #[strong 35 дней],#[br] из эмали – #[strong 45 дней] 
+					.s6__item.s6__item-6
+						.s6__item-fnum.s6__item-fnum--right 06
+						+picture(png, `${assets}s6-i6`, 'n').s6__item-fimg
+						.s6__item-title Отвозим#[br.d-lg-none] перегородку вам 
+						.s6__item-descr Или храним на складе столько, сколько нужно.#[br] Перегородка хранится#[br] в упаковке: её не повредят#[br] и не испачкают
+					.s6__item.s6__item-7
+						.s6__item-fnum 07
+						+picture(png, `${assets}s6-i7`, 'n').s6__item-fimg
+						.s6__item-title Монтируем#[br.d-lg-none] перегородку 
+						.s6__item-descr В среднем мы монтируем перегородку 1-2 дня, на сложные заказы уходит #[strong максимум 3 дня.] Когда перегородка смонтирована, вы вносите оставшиеся 50% оплаты.
+					.s6__item.s6__item-8
+						.s6__item-fnum.s6__item-fnum--right 08
+						+picture(png, `${assets}s6-i8`, 'n').s6__item-fimg
+						.s6__item-descr Если вы не против,#[br] мы фотографируем установленную перегородку для своей #[a(href="#") базы кейсов.]
+		section.s7 
+			.s7__widget
+				.s7__title.h2 Вашу перегородку не&nbsp;повредят во&nbsp;время&nbsp;доставки
+				.s7__subtitle Мы тщательно упаковываем изделие перед погрузкой
+				.s7__set 
+					.s7__item.s7__item-1
+						.s7__item-circle
+						.s7__item-divider
+						.s7__item-text
+							.s7__item-ttl ПУЗЫРЧАТАЯ#[br] ПЛЁНКА
+						+picture(png, `${assets}s7-towel`, 'n').s7__item-img
+					.s7__item.s7__item-2
+						.s7__item-circle
+						.s7__item-divider
+						.s7__item-text
+							.s7__item-ttl СТЯЖКИ
+						+picture(png, `${assets}s7-tyag`, 'n').s7__item-img
+					.s7__item.s7__item-3
+						.s7__item-circle
+						.s7__item-divider
+						.s7__item-text
+							.s7__item-ttl 10-мм ОБРЕШЁТКА
+							.s7__item-subttl Для отправки в&nbsp;дальние регионы
+						+picture(png, `${assets}s7-box`, 'n').s7__item-img
+		section.capture 
+			.capture__ibg.ibg 
+				+picture(jpg, `${assets}capture-bg`, 'sl')
+			.container 
+				.capture__title.h2 Хотите обсудить детали?
+				.capture__subtitle Оставьте заявку, и наш менеджер свяжется с вами
+				form.capture__form
+					.input-wrap.input-wrap--light 
+						label.input-label Имя
+						input.input(type="text" name="Имя")
+					.input-wrap.input-wrap--light 
+						label.input-label Телефон
+						input.input.phone(type="tel" name="Телефон")
+					.btn-solid-wrap 
+						.btn-solid-red-sub
+						button.capture__form-btn.btn.btn-solid-red(href="#" type="submit") ОСТАВИТЬ ЗАЯВКУ
+		section.s8 
+			.container
+				.s8__title.h2 В нашей команде –#[br.d-lg-none] #[strong только проверенные грамотные специалисты]
+				.s8__team-img.ibg
+					+picture(jpg, `${assets}s8-team`, 'n')
+				.s8__point 
+					+picture(png, `${assets}s8-worker`, 'n').s8__point-img
+					.s8__point-text Сертифицированные специалисты с опытом работы от 3-х лет
+				.s8__point 
+					+picture(png, `${assets}s8-drill`, 'n').s8__point-img
+					.s8__point-text Наша команда использует только качественные инструменты
+				.s8__descr Весь инструментарий наших монтажников состоит#[br] из #[strong инструментов премиум-сегмента] японских и американских фирм #[strong стоимостью более 1 млн рублей]
+				a.s8__btn.btn.btn-outline-primary(href="#") Получить консультацию
+		section.s9 
+			.container 
+				+picture(png, `${assets}s9-bg`).s9__img-bg
+				.s9__title.h2 Душа нашей компании
+				.s9__img-man-wrap
+					+picture(png, `${assets}s9-man`, 'n').s9__img-man
+				.s9__text
+					.s9__text-title История#[br.d-lg-none] основателя DELI,#[br] #[strong Ивана Дегтева]
+					p Мой путь берёт начало в 2008 году. 
+					p Сразу после возвращения с армии, мир заиграл новыми красками, и я переехал в Иркутск.
+					p Как многие, пробовал работу среднего класса. А именно — охрана одного из офисов. #[strong Мне хватило трёх месяцев, чтобы понять, что для меня предназначено другое дело.]
+					p Помню броское объявление в газете:#[br] #[strong "Ищем ученика для монтажа дверей".]#[br] Что-то во мне отозвалось и я решился пойти#[br] к ним на обучение.
+					p Как мне тогда говорили "у тебя ничего не получится, будешь только входные монтировать".  А после отправили учиться на стройку.#[br] После того случая, #[strong я на первые отложенные деньги  купил инструменты и начал работать сам.] 
+					p #[strong А уже в 2012 году] у меня родился сын,#[br] и #[strong через месяц я открыл свой первый магазин — #[b "Добротные двери"].]
+				.btn-solid-wrap.s9__btn-wrap 
+					.btn-solid-primary-sub
+					a.s9__btn.btn.btn-solid-primary(href="#") Читать продолжение
+		section.s10 
+			.s10__container.container
+				.s10__block
+					.s10__title.h2 Более 300 клиентов уже довольны установленными перегородками 
+					.s10__ibg.ibg 
+						+picture(jpg, `${assets}s10-fam`, 'n')
+					.s10__play 
+						a.s10__play-btn(href="#video" data-uk-toggle)
+						.s10__play-text 
+							p Смотреть видео отзыв
+					.s10__descr
+						.s10__dttl Описание работы в&nbsp;несколько строк
+						.s10__q “Короткая цитата из отзыва”
+						.s10__rep 
+							p Полный текст отзыва полный текст отзыва Полный текст отзыва. Полный текст отзыва. Полный текст отзыва полный текст отзыва. Полный текст отзыва.
+							p Полный текст отзыва Полный текст отзыва Полный текст. отзыва. Полный текст отзыва. Полный текст отзыва текст.
+		section.s11 
+			.container 
+				+picture(png, `${assets}s11-bg`).s11__img-bg
+				.s11__title.h2 Наши #[span.text-primary проверенные представители] есть в&nbsp;30 городах России,#[br] #[span.s11__title-sm помимо Москвы]
+				ul.s11__towns 
+					-
+						var towns = [
+							'Санкт Петербург', 'Краснодар', 'Саратов', ' Самара', 'Волгоград', 'Владивосток', 'Хабаровск', 'Иркутск',
+							'Сочи', 'Новосибирск', 'Кемерово', 'Барнаул', 'Новокузнецк', 'Томск', 'Чита', 'Улан-Удэ', 'Екатеринбург',
+							'Казань', 'Воронеж', 'Красноярск',
+						]
+					each item in towns 
+						li= item
+					li.s11__towns-item--last и другие
+		section.s12 
+			.container 
+				+picture(png, `${assets}s12-bridge-bg`, 'n').s12__img-bg.s12__img-bg-1
+				+picture(png, `${assets}s12-kremlin-bg`, 'n').s12__img-bg.s12__img-bg-2
+				+picture(png, `${assets}s12-temple-bg`, 'n').s12__img-bg.s12__img-bg-3
+				.s12__title.h2 Адреса выставок перегородок#[br] #[span.s12__title-sm в&nbsp;Москве и регионах]
+				.s12__items 
+					.s12__item
+						+picture(png, `${assets}s12-kremlin`, 'n').s12__item-img
+						.s12__item-text 
+							.s12__item-title Москва
+							.s12__item-adress Шоурум DElI, ТК "Конструктор"#[br.d-none.d-lg-inline] 25 км. МКАД, владение 4, стр. 1, 4-й этаж.
+					.s12__item
+						+picture(png, `${assets}s12-bridge`, 'n').s12__item-img
+						.s12__item-text 
+							.s12__item-title Санкт-Петербург
+							.s12__item-adress Московское шоссе, д.7а
+					.s12__item
+						+picture(png, `${assets}s12-temple`, 'n').s12__item-img
+						.s12__item-text 
+							.s12__item-title Хабаровск
+							.s12__item-adress Железнодорожный район,#[br.d-lg-none] проспект 60-летия Октября,#[br.d-lg-none] ТЦ Стройка 1 этаж, 152, 680014
+		section.capture.capture--light 
+			.capture__ibg.ibg 
+				+picture(jpg, `${assets}capture-light-bg`, 'sl')
+			.container 
+				.capture__title.h2 Хотите заказать перегородку#[br.d-none.d-lg-inline] в один из этих регионов? 
+				.capture__subtitle Оставьте заявку, и наш менеджер свяжется с вами
+				form.capture__form
+					.input-wrap.input-wrap--dark
+						label.input-label Имя
+						input.input(type="text" name="Имя")
+					.input-wrap.input-wrap-dark 
+						label.input-label Телефон
+						input.input.phone(type="tel" name="Телефон")
+					.btn-solid-wrap 
+						.btn-solid-primary-sub
+						button.capture__form-btn.btn.btn-solid-primary(href="#" type="submit") Оставить заявку
+
+				
+
+

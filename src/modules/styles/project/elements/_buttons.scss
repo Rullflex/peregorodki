@@ -1,0 +1,177 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: $transition--very-fast;
+    user-select: none;
+
+    margin: 0;
+    outline: none;
+    border: none;
+    overflow: visible;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+.btn {
+    &-solid {
+        &-wrap {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0.12rem;
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                padding-bottom: 3px;
+            }
+        }
+        @mixin btn-solid-sub($bg) {
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+
+            background: $bg;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        @mixin btn-solid($btn-color, $font-color) {
+            background: $btn-color;
+            color: $font-color;
+            &:active {}
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {}
+            }
+        }
+        &-primary {
+            background: #1FACE7;
+            border-radius: 50px;
+
+            font-family: Raleway;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.33);
+
+            position: relative;
+            z-index: 1;
+            &:focus-visible {
+                background: linear-gradient(180deg, #1FACE7 0%, #0079AC 100%), #1FACE7;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    background: linear-gradient(180deg, #1FACE7 0%, #0079AC 100%), #1FACE7;
+                }
+            }
+            &:active {
+                transform: translateY(3px);
+                background: linear-gradient(180deg, #0079AC 0%, #1FACE7 100%), #1FACE7 !important;
+                text-shadow: -2px -3px 5px rgba(0, 0, 0, 0.33);
+            }
+            &-sub {
+                @include btn-solid-sub(#224693);
+            }
+        }
+        &-red {
+            // width: 350px;//
+
+            background: linear-gradient(180deg, #F54848 0%, #F34345 0.01%, #C20F1C 100%, #D71320 100%);
+            border-radius: 50px;
+
+            font-family: Raleway;
+            color: #FFFFFF;
+
+            position: relative;
+            z-index: 1;
+            &:focus-visible {
+                font-weight: 600;
+                background: linear-gradient(180deg, #ED4848 0%, #B90916 100%);
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    font-weight: 600;
+                    background: linear-gradient(180deg, #ED4848 0%, #B90916 100%);
+                }
+            }
+            &:active {
+                transform: translateY(3px);
+                background: linear-gradient(180deg, #B90916 0%, #ED4848 100%) !important;
+                text-shadow: -3px -2px 6px rgba(0, 0, 0, 0.33);
+                font-weight: bold !important;
+            }
+            &-sub {
+                @include btn-solid-sub(#82020B);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 11px rgba(155, 0, 11, 0.66);
+            }
+        }
+    }
+    &-outline {
+        @mixin btn-outline($btn-color) {
+            // width: 396px;//
+            // line-height: 86px;//
+
+            border-width: 0.1rem;
+            border-style: solid;
+            border-color: $btn-color;
+            border-radius: 50px;
+            filter: drop-shadow(0px 3px 10px rgba($btn-color, 0.33));
+
+            
+            color: $btn-color;
+            // font-size: 20px;//
+            &:focus-visible {
+                background-color: rgba($btn-color, 0.15);
+                font-weight: bold;
+            }
+            &:active {
+                color: #FFFFFF;
+                text-shadow: -2px -3px 11px rgba(41, 59, 97, 0.33);
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                border-width: 3px;
+                &:hover {
+                    background: rgba($btn-color, 0.15);
+                }
+            }
+        }
+        &-primary {
+            @include btn-outline(#019CDD);
+            font-family: 'Raleway';
+            font-weight: 600;
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+            &:active {
+                background: linear-gradient(180deg, rgba(34, 70, 147, 0.33) 0%, rgba(1, 156, 221, 0.33) 100%), rgba(31, 172, 231, 0.22) !important;
+                font-weight: bold;
+            }
+        }
+        &-secondary {
+            @include btn-outline(#293B61);
+            font-family: 'Montserrat';
+            font-weight: bold;
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    font-weight: 800;
+                }
+            }
+            &:active {
+                background: linear-gradient(180deg, rgba(41, 59, 97, 0.33) 0%, rgba(29, 169, 227, 0.33) 100%), rgba(41, 59, 97, 0.22) !important;
+                font-weight: 800;
+            }
+        }
+    }
+}

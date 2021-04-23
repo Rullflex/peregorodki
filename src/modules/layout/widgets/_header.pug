@@ -1,0 +1,23 @@
+mixin header()
+    header.header 
+        .header__container.container 
+            .header__top 
+                .header__logo-wrap 
+                    a(href="/").header__logo
+                        +icon('logo').header__logo-icon
+                    .header__logo-text Изготовление и установка раздвижных перегородок по всей России
+                .header__right
+                    a.header__tel(href=phoneLink)!= phoneNumber
+                    a.header__btn.btn.btn-outline-primary() Заказать звонок
+                    +menu
+                
+            .header__nav
+                a.header__nav-link.active(href="#")
+                    +icon('home')
+                a.header__nav-link(href="#") Каталог 
+                a.header__nav-link(href="#") Этапы работы
+                a.header__nav-link(href="#") Отзывы
+                a.header__nav-link(href="#") Кейсы
+                a.header__nav-link(href="#") Региональные представители
+                a.header__nav-link(href="#") Блог
+                a.header__nav-link(href="#") Калькулятор

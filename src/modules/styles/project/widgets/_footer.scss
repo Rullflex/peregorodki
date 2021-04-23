@@ -1,0 +1,159 @@
+.footer {
+    background: #1B2A4A;
+    padding: 1.3875rem 0;
+    color: #FFFFFF;
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    &__row {
+        padding: 0 0 1.25rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(white, 0.15);
+    }
+    &__logo {
+        border: 0.0625rem solid #FFFFFF;
+        border-radius: 0.1875rem;
+        &-icon {
+            width: 2.4375rem;
+        }
+    }
+    &__creds {
+        line-height: 0.875rem;
+        &-ooo {
+            font-weight: bold;
+            font-size: 0.625rem;
+        }
+        &-p {
+            font-size: 0.5rem;
+        }
+    }
+    &__contacts {
+        line-height: 0.875rem;
+        &-title {
+            font-weight: bold;
+            font-size: 0.625rem;
+        }
+        &-tel {
+            font-size: 0.5rem;
+        }
+        &-email {
+            font-size: 0.5rem;
+            a {
+                text-decoration: underline;
+                color: #FFFFFF;
+            }            
+        }
+    }
+    &__time {
+        font-size: 0.5rem;
+        margin-top: 0.4rem;
+    }
+    &__icons {
+        width: 7.0625rem;
+        display: flex;
+        justify-content: space-between;
+        &-inst {
+            width: 1.25rem;
+        }
+        &-yt {
+            width: 1.75rem;
+        }
+        &-wa {
+            width: 1.25rem;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .footer {
+        padding: 79px 0 66px;
+        .container {
+            padding-left: 90px;
+            padding-right: 85px;
+        }
+        &__row {
+            padding: 0 0 70px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__logo {
+            border: none;
+            border-radius: 3px;
+            &-icon {
+                width: 105px;
+            }
+        }
+        &__creds {
+            line-height: 23px;
+            &-ooo {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            &-p {
+                font-size: 16px;
+            }
+        }
+        &__contacts {
+            line-height: 23px;
+            &-title {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            &-tel {
+                font-size: 16px;
+                a {
+                    transition: $transition--hover;
+                    &:hover {
+                        text-decoration: underline;
+                        color: link-hover($primary);
+                    }
+                } 
+            }
+            &-email {
+                font-size: 16px;
+                a {
+                    
+                    transition: $transition--hover;
+                    &:hover {
+                        color: link-hover($primary);
+                    }
+                }            
+            }
+        }
+        &__time {
+            font-size: 16px;
+            margin-top: 0;
+            &-title {
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 6px;
+            }
+        }
+        &__icons {
+            width: 157px;
+            position: absolute;
+            top: 73px;
+            right: 84px;
+            a {
+                transition: $transition--hover;
+                &:hover {
+                    color: link-hover($primary);
+                }
+            }
+            &-inst {
+                width: 28px;
+            }
+            &-yt {
+                width: 39px;
+            }
+            &-wa {
+                width: 28px;
+            }
+        }
+    }
+}

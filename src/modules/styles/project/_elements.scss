@@ -1,0 +1,24 @@
+@import "./elements/buttons";
+@import "./elements/input";
+@import "./elements/slider";
+@import "./elements/loader";
+@import "./elements/menu";
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.1em;
+    text-align: center;
+    color: #293B61;
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        font-weight: 800;
+        font-size: 55px;
+        line-height: 67px;
+    }
+}

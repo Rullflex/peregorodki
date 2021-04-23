@@ -1,0 +1,28 @@
+$relative-link-to-modules: "../fonts";
+
+@include font-face("Raleway", "Raleway-Thin", "100", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-ExtraLight", "200", "normal", $relative-link-to-modules);
+// @include font-face("F", "F-UltraLight", "200", "normal", $relative-link-to-modules);
+// @include font-face("F", "F-Thin", "200", "normal", $relative-link-to-modules);
+
+@include font-face("Raleway", "Raleway-Light", "300", "normal", $relative-link-to-modules);
+
+@include font-face("Raleway", "Raleway-Regular", "400", "normal", $relative-link-to-modules);
+@include font-face("Raleway", "Raleway-Medium", "500", "normal", $relative-link-to-modules);
+@include font-face("Raleway", "Raleway-SemiBold", "600", "normal", $relative-link-to-modules);
+@include font-face("Raleway", "Raleway-Bold", "700", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-ExtraBold", "800", "normal", $relative-link-to-modules);
+
+@include font-face("Raleway", "Raleway-Black", "900", "normal", $relative-link-to-modules);
+
+
+@include font-face("Montserrat", "Montserrat-Regular", "400", "normal", $relative-link-to-modules);
+@include font-face("Montserrat", "Montserrat-Medium", "500", "normal", $relative-link-to-modules);
+@include font-face("Montserrat", "Montserrat-SemiBold", "600", "normal", $relative-link-to-modules);
+@include font-face("Montserrat", "Montserrat-Bold", "700", "normal", $relative-link-to-modules);
+@include font-face("Montserrat", "Montserrat-ExtraBold", "800", "normal", $relative-link-to-modules);
+
+@include font-face("IBMPlexSans", "IBMPlexSans-SemiBold", "600", "normal", $relative-link-to-modules);
+@include font-face("IBMPlexSans", "IBMPlexSans-Bold", "700", "normal", $relative-link-to-modules);

@@ -1,0 +1,28 @@
+mixin menu 
+    .menu&attributes(attributes)
+        a.menu-icon(href="#") #[i]#[i]#[i]#[i]
+        .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
+            .menu__content
+                .menu__logo-wrap 
+                    a(href="/").menu__logo
+                        +icon('logo').menu__logo-icon
+                    .menu__logo-text Изготовление и установка раздвижных перегородок по всей России
+                a.menu__tel(href=phoneLink)!= phoneNumber
+                a.menu__btn.btn.btn-outline-primary() Заказать звонок
+                .menu__nav
+                    a.menu__nav-link.active(href="#") Главная 
+                    a.menu__nav-link(href="#") Каталог 
+                    a.menu__nav-link(href="#") Этапы работы
+                    a.menu__nav-link(href="#") Отзывы
+                    a.menu__nav-link(href="#") Кейсы
+                    a.menu__nav-link(href="#") Региональные представители
+                    a.menu__nav-link(href="#") Блог
+                    a.menu__nav-link(href="#") Калькулятор
+                .menu__links 
+                    a(href!=instLink target="_blank" rel="noopener noreferrer")
+                        +icon('inst-b').menu__links-inst
+                    a(href!=ytLink target="_blank" rel="noopener noreferrer")
+                        +icon('yt-b').menu__links-yt
+                    a(href!=waLink target="_blank" rel="noopener noreferrer")
+                        +icon('wa-b').menu__links-wa
+                a.menu__email(href!=`mailto:${mailAdress}`)!= mailAdress
