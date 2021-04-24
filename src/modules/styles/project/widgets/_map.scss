@@ -1,0 +1,15 @@
+.map {
+    background: #eee;
+    height: 16.125rem;
+    iframe {
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        position: relative;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .map {
+        height: 678px;
+    }
+}

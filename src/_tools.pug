@@ -1,0 +1,30 @@
+extends modules/layout/_layout
+
+prepend head
+	title Tools
+	meta(name="description", content="Описание страницы")
+
+block header
+	+header()
+block footer
+	+footer()
+block content
+	main.main
+		section.s14 
+			.s14__ibg.cmn-bg 
+				+picture('svg', `${assets}s14-bg`)
+			.container
+				.s14__title.h2 Мы используем высокоточное оборудование ведущих европейских компаний
+				+picture(png, `${assets}s14-tools`).s14__tools
+		section.s15 
+			.container 
+				.s15__title.h2 Производство в Москве
+				.s15__ibg.ibg 
+					+picture(png, `${assets}s15-prod`)
+		section#map.map
+			
+
+
+				
+
+

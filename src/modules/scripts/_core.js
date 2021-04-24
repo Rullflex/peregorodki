@@ -94,21 +94,32 @@ class App {
     // поздагрузка YouTube видео внутрь блока только при его появлении
     videoSpy(videoWrapper, YTid) {
         const $videoWrapper = document.querySelector(videoWrapper)
-        UIkit.scrollspy($videoWrapper)
-        $videoWrapper.addEventListener(`inview`, (event) => {
-            $videoWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml)
-            $videoWrapper.insertAdjacentHTML(`beforeend`, `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${YTid}" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
-        })
+        if ($videoWrapper) {
+            UIkit.scrollspy($videoWrapper)
+            $videoWrapper.addEventListener(`inview`, (event) => {
+                $videoWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml)
+                $videoWrapper.insertAdjacentHTML(`beforeend`, `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${YTid}" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
+            })
+        }
+       
     }
 
     // поздагрузка Google карты внутрь блока только при его появлении
     mapSpy(mapWrapper, mapSrc) {
         const $mapWrapper = document.querySelector(mapWrapper)
-        UIkit.scrollspy($mapWrapper)
-        $mapWrapper.addEventListener(`inview`, (event) => {
-            $mapWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml)
-            $mapWrapper.insertAdjacentHTML(`beforeend`, `<iframe src="${mapSrc}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`)
-        })
+        
+        if ($mapWrapper) { 
+            UIkit.scrollspy($mapWrapper)
+            $mapWrapper.addEventListener(`inview`, (event) => {
+                // let s = document.createElement("script");
+                // s.type = "text/javascript";
+                // s.src = "https://maps.googleapis.com/maps/api/js?callback=initMap";
+                // document.querySelector(`body`).append(s);
+                $mapWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml)
+
+                $mapWrapper.insertAdjacentHTML(`beforeend`, `<iframe src="${mapSrc}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`)
+            })
+        }
     }
 
     // маска для телефонов

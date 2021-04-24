@@ -1,5 +1,5 @@
-mixin header()
-    header.header 
+mixin header(active = 0)
+    header.header&attributes(attributes) 
         .header__container.container 
             .header__top 
                 .header__logo-wrap 
@@ -12,12 +12,12 @@ mixin header()
                     +menu
                 
             .header__nav
-                a.header__nav-link.active(href="#")
+                a.header__nav-link(href="#" class=`${active == 1 ? 'active' : ''}`)
                     +icon('home')
-                a.header__nav-link(href="#") Каталог 
-                a.header__nav-link(href="#") Этапы работы
-                a.header__nav-link(href="#") Отзывы
-                a.header__nav-link(href="#") Кейсы
-                a.header__nav-link(href="#") Региональные представители
-                a.header__nav-link(href="#") Блог
-                a.header__nav-link(href="#") Калькулятор
+                a.header__nav-link(href="#" class=`${active == 2 ? 'active' : ''}`) Каталог 
+                a.header__nav-link(href="#" class=`${active == 3 ? 'active' : ''}`) Этапы работы
+                a.header__nav-link(href="#" class=`${active == 4 ? 'active' : ''}`) Отзывы
+                a.header__nav-link(href="#" class=`${active == 5 ? 'active' : ''}`) Кейсы
+                a.header__nav-link(href="#" class=`${active == 6 ? 'active' : ''}`) Региональные представители
+                a.header__nav-link(href="#" class=`${active == 7 ? 'active' : ''}`) Блог
+                a.header__nav-link(href="#" class=`${active == 8 ? 'active' : ''}`) Калькулятор

@@ -1,52 +1,110 @@
-
-.slide {
-    &dots {
-        justify-content: center;
-        margin-left: 0;
-        &>* {
-            padding: 0 0.3125rem;
-            &>* {
-                width: 1.3125rem;
-                height: 1.3125rem;
-                border-width: 0.125rem;
-                border-style: solid;
-                border-color: $primary;
-                background: transparent;
-                &:hover, &:focus {
-                    background-color: link-hover($primary);
-                }
-            }
-        }
-        &>.uk-active>* {
-            background-color: $primary;
-        }
-        &--white {
-            &>* {
-                &>* {
-                    border-color: white;
-                }
-            }
-        }
-        &--yellow {
-            &>* {
-                &>* {
-                    border-color: white;
-                    &:hover, &:focus {
-                        background-color: link-hover($yellow);
-                    }
-                }
-            }
-            &>.uk-active>* {
-                background-color: $yellow;
-            }
-        }
+/* ========================================================================
+   Component: slider-nav
+ ========================================================================== */
+.slider-nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.0625rem;
+    @include center-item-x('relative');
+    margin: 0.8125rem auto;
+    .slidenav {
+        @include center-item();
     }
-    &nav {
-        svg {
-            width: 1.5rem;
-            path {
-                stroke: white;
-            }
-        }
+    
+}
+
+/* ========================================================================
+   Component: Slidenav
+ ========================================================================== */
+
+ .slidenav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    &__item {}
+    &__link {
+        pointer-events: initial;
+        color: rgba($secondary, 0.4);
+        &--prev {}
+        &--next {}
+    }
+    &__icon {
+        width: 0.7rem;
     }
 }
+
+/* ========================================================================
+   Component: Thumbnav
+ ========================================================================== */
+
+.thumbnav {
+    display: flex;
+    &__item {
+        display: flex;
+        &.uk-active {
+            .thumbnav {
+                &__link {}
+            }
+        }
+    }
+    &__link {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: #eee;
+        &:hover {}
+        &:focus {}
+    }
+}
+
+/* ========================================================================
+   Component: Dotnav
+ ========================================================================== */
+
+.dotnav {
+    display: flex;
+    justify-content: center;
+    li {
+        flex: none;
+        padding: 0 0.4375rem;
+        a {
+            display: block;
+            width: 1.25rem;
+            height: 1.25rem;
+
+            border-radius: 50%;
+            // border-width: 0.125rem;
+            // border-style: solid;
+            // border-color: $primary;
+            background: rgba($secondary, 0.4);
+
+            text-indent: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+
+            /* Hover + Focus */
+            &:hover, &:focus {
+                background-color: link-hover($primary);
+                outline: none;
+            }
+            /* OnClick */
+            &:active {
+               
+            }
+        }
+        /* Active */
+        &.uk-active {
+            a {
+                background-color: $secondary;
+            }
+        }
+    }
+    &--white {}
+    &--yellow {}
+}
+
+
+
+

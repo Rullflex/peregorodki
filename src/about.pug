@@ -1,0 +1,54 @@
+extends modules/layout/_layout
+
+prepend head
+	title About
+	meta(name="description", content="Описание страницы")
+
+block header
+	+header()
+block footer
+	+footer()
+block content
+	main.main
+		section.s16 
+			.s16__ibg.cmn-bg
+				+picture('svg', `${assets}s13-bg`, 'sl')
+			.container 
+				.s16__title.h2 Перегородка – “стена”, пропускающая свет, которую #[span.text-primary с&nbsp;лёгкостью отодвинет  даже ребёнок]
+		section.capture 
+			.capture__ibg.ibg 
+				+picture(jpg, `${assets}capture-bg`, 'sl')
+			.container 
+				.capture__title.h2 Хотите проконсультироваться#[br.d-none.d-lg-inline] по поводу перегородки?
+				.capture__subtitle Оставьте заявку, и наш менеджер свяжется с вами
+				form.capture__form
+					.input-wrap.input-wrap--light 
+						label.input-label Имя
+						input.input(type="text" name="Имя")
+					.input-wrap.input-wrap--light 
+						label.input-label Телефон
+						input.input.phone(type="tel" name="Телефон")
+					.btn-solid-wrap 
+						.btn-solid-red-sub
+						button.capture__form-btn.btn.btn-solid-red(type="submit") ОСТАВИТЬ ЗАЯВКУ
+		section.capture.capture--light 
+			.capture__ibg.ibg 
+				+picture(jpg, `${assets}capture-light-bg`, 'sl')
+			.container 
+				.capture__title.h2 Хотите проконсультироваться#[br.d-none.d-lg-inline] по поводу перегородки?
+				.capture__subtitle Оставьте заявку, и наш менеджер свяжется с вами
+				form.capture__form
+					.input-wrap.input-wrap--dark
+						label.input-label Имя
+						input.input(type="text" name="Имя")
+					.input-wrap.input-wrap-dark 
+						label.input-label Телефон
+						input.input.phone(type="tel" name="Телефон")
+					.btn-solid-wrap 
+						.btn-solid-primary-sub
+						button.capture__form-btn.btn.btn-solid-primary(type="submit") Оставить заявку
+
+
+				
+
+

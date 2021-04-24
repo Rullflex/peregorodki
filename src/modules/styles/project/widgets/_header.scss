@@ -1,4 +1,6 @@
 .header {
+    position: relative;
+    @include bg(#1B2A4A);
     &__container {
         padding-left: 0.625rem;
         padding-right: 0.625rem;

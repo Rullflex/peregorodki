@@ -18,6 +18,28 @@ mixin popup-video-16-9
 
 //- SLIDER
 
+mixin slider-nav
+	.slider-nav
+		ul.dotnav.uk-slider-nav&attributes(attributes)
+		ul.slidenav&attributes(attributes)
+			li.slidenav__item(data-uk-slider-item="previous")
+				a.slidenav__link.slidenav__link--prev(href="#")
+					+icon('angle-left').slidenav__icon
+			li.slidenav__item(data-uk-slider-item="next")
+				a.slidenav__link.slidenav__link--next(href="#")
+					+icon('angle-right').slidenav__icon
+
+mixin slideshow-nav
+	.slideshow-nav
+		ul.dotnav.uk-slideshow-nav&attributes(attributes)
+		ul.slidenav&attributes(attributes)
+			li.slidenav__item(data-uk-slideshow-item="previous")
+				a.slidenav__link.slidenav__link--prev(href="#")
+					+icon('angle-left').slidenav__icon
+			li.slidenav__item(data-uk-slideshow-item="next")
+				a.slidenav__link.slidenav__link--next(href="#")
+					+icon('angle-right').slidenav__icon
+
 mixin slider-dotnav
 	ul.dotnav.uk-slider-nav&attributes(attributes)
 

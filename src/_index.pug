@@ -5,7 +5,7 @@ prepend head
 	meta(name="description", content="Описание страницы")
 
 block header
-	+header()
+	+header(1)
 block footer
 	+footer()
 block content
@@ -249,7 +249,7 @@ block content
 						input.input.phone(type="tel" name="Телефон")
 					.btn-solid-wrap 
 						.btn-solid-red-sub
-						button.capture__form-btn.btn.btn-solid-red(href="#" type="submit") ОСТАВИТЬ ЗАЯВКУ
+						button.capture__form-btn.btn.btn-solid-red(type="submit") ОСТАВИТЬ ЗАЯВКУ
 		section.s8 
 			.container
 				.s8__title.h2 В нашей команде –#[br.d-lg-none] #[strong только проверенные грамотные специалисты]
@@ -347,7 +347,7 @@ block content
 						input.input.phone(type="tel" name="Телефон")
 					.btn-solid-wrap 
 						.btn-solid-primary-sub
-						button.capture__form-btn.btn.btn-solid-primary(href="#" type="submit") Оставить заявку
+						button.capture__form-btn.btn.btn-solid-primary(type="submit") Оставить заявку
 
 				
 
