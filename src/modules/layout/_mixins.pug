@@ -4,22 +4,21 @@ include widgets/_menu
 
 
 //- BREADCRUMB
-mixin breadcrumb(arrayOfLink = [], readTime)
+mixin breadcrumb(arrayOfLinks = [], readTime)
 	ul.breadcrumb&attributes(attributes)
 		.breadcrumb__readtime!= readTime
-		each item, idx in arrayOfLink
-			if idx == arrayOfLink.length - 1
+		each item, idx in arrayOfLinks
+			if idx == arrayOfLinks.length - 1
 				li.breadcrumb__item.breadcrumb__item--last
-					span.breadcrumb__link!= item
+					span.breadcrumb__link!= item[0]
 			else
 				li.breadcrumb__item
-					a.breadcrumb__link(href="#")= item
-mixin breadcrumb-bot(arrayOfLink = [], readTime)
+					a.breadcrumb__link(href=item[1])!= item[0]
+mixin breadcrumb-bot(arrayOfLinks = [])
 	ul.breadcrumb.breadcrumb--bot&attributes(attributes)
-		//- .breadcrumb__readtime!= readTime
-		each item, idx in arrayOfLink
+		each item, idx in arrayOfLinks
 			li.breadcrumb__item
-				a.breadcrumb__link(href="#")!= item
+				a.breadcrumb__link(href=item[1])!= item[0]
 //- PLAY BTN
 mixin play-btn(text, vhref = "#video")
 	.play-btn&attributes(attributes)

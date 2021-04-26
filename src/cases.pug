@@ -10,7 +10,7 @@ block footer
 	+footer()
 block content
 	main.main
-		+breadcrumb(['Главная', 'Кейсы'])
+		+breadcrumb([['Главная', '/'], ['Кейсы', '/cases.html']])
 		section.blog 
 			.blog__ibg.cmn-bg
 				+picture('svg', `${assets}s13-bg`, 'sl')
@@ -22,7 +22,7 @@ block content
 						.blog__item-descr Описание в тему кейса в несколько строк. Описание кейса, которое заинтересует посетителя сайта. Описание.
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i1`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/case-layout.html") Читать
 
 				.blog__item.blog__item--reverse
 					.blog__item-title Разделили комнаты для семьи с тремя детьми
@@ -30,7 +30,7 @@ block content
 						.blog__item-descr Описание в тему кейса в несколько строк. Описание кейса, которое заинтересует посетителя сайта. Описание.
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i2`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/case-layout.html") Читать
 
 				.blog__item
 					.blog__item-title Разделили комнаты для семьи с тремя детьми
@@ -38,7 +38,7 @@ block content
 						.blog__item-descr В статье рассказываю, из чего лучше сделать перегородку: кирпич, гипсокартон или другие материалы 
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i3`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/case-layout.html") Читать
 
 				.blog__item.blog__item--reverse
 					.blog__item-title Разделили комнаты для семьи с тремя детьми
@@ -46,7 +46,7 @@ block content
 						.blog__item-descr Описание в тему кейса в несколько строк. Описание кейса, которое заинтересует посетителя сайта. Описание.
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i4`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/case-layout.html") Читать
 
 				.blog__item
 					.blog__item-title Разделили комнаты для семьи с тремя детьми
@@ -54,9 +54,9 @@ block content
 						.blog__item-descr Описание в тему кейса в несколько строк. Описание кейса, которое заинтересует посетителя сайта. Описание.
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i5`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/case-layout.html") Читать
 
-		+breadcrumb-bot(['Назад на главную'])
+		+breadcrumb-bot([['Назад на главную', '/']])
 		
 
 				

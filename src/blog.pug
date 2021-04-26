@@ -10,7 +10,7 @@ block footer
 	+footer()
 block content
 	main.main
-		+breadcrumb(['Главная', 'Блог'])
+		+breadcrumb([['Главная', '/'], ['Блог', '/blog.html']])
 		section.blog 
 			.blog__ibg.cmn-bg
 				+picture('svg', `${assets}s13-bg`, 'sl')
@@ -22,7 +22,7 @@ block content
 						.blog__item-descr В статье рассказываю, из чего лучше сделать перегородку: кирпич, гипсокартон или другие материалы 
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i1`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/blog-layout.html") Читать
 
 				.blog__item.blog__item--reverse
 					.blog__item-title Почему лучше ставить перегородку, а не стену?
@@ -30,7 +30,7 @@ block content
 						.blog__item-descr В статье рассказываю, почему перегородка – это лучшее решение практически для всех типов квартир...
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i2`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/blog-layout.html") Читать
 
 				.blog__item
 					.blog__item-title Почему лучше ставить перегородку, а не стену?
@@ -38,7 +38,7 @@ block content
 						.blog__item-descr В статье рассказываю, из чего лучше сделать перегородку: кирпич, гипсокартон или другие материалы 
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i3`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/blog-layout.html") Читать
 
 				.blog__item.blog__item--reverse
 					.blog__item-title Почему лучше ставить перегородку, а не стену?
@@ -46,7 +46,7 @@ block content
 						.blog__item-descr В статье рассказываю, почему перегородка – это лучшее решение практически для всех типов квартир...
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i4`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/blog-layout.html") Читать
 
 				.blog__item
 					.blog__item-title Почему лучше ставить перегородку, а не стену?
@@ -54,9 +54,9 @@ block content
 						.blog__item-descr В статье рассказываю, из чего лучше сделать перегородку: кирпич, гипсокартон или другие материалы 
 						.blog__item-img.ibg 
 							+picture(jpg, `${assets}blog-i5`, 'n')
-					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+					a.blog__item-btn.btn.btn-outline-primary(href="/blog-layout.html") Читать
 
-		+breadcrumb-bot(['Назад на главную'])
+		+breadcrumb-bot([['Назад на главную', '/']])
 		
 
 				

@@ -14,10 +14,10 @@ mixin header(active = 0)
             .header__nav
                 a.header__nav-link(href="/" class=`${active == 1 ? 'active' : ''}`)
                     +icon('home')
-                a.header__nav-link(href="#" class=`${active == 2 ? 'active' : ''}`) Каталог 
-                a.header__nav-link(href="#" class=`${active == 3 ? 'active' : ''}`) Этапы работы
-                a.header__nav-link(href="#" class=`${active == 4 ? 'active' : ''}`) Отзывы
+                a.header__nav-link(href="/about.html" class=`${active == 2 ? 'active' : ''}`) Каталог 
+                a.header__nav-link(href="/professionals.html" class=`${active == 3 ? 'active' : ''}`) Этапы работы
+                a.header__nav-link(href="/tools.html" class=`${active == 4 ? 'active' : ''}`) Отзывы
                 a.header__nav-link(href="/cases.html" class=`${active == 5 ? 'active' : ''}`) Кейсы
-                a.header__nav-link(href="#" class=`${active == 6 ? 'active' : ''}`) Региональные представители
+                a.header__nav-link(href="/region.html" class=`${active == 6 ? 'active' : ''}`) Региональные представители
                 a.header__nav-link(href="/blog.html" class=`${active == 7 ? 'active' : ''}`) Блог
                 a.header__nav-link(href="#" class=`${active == 8 ? 'active' : ''}`) Калькулятор

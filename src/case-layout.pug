@@ -1,7 +1,7 @@
 extends modules/layout/_layout
 
 prepend head
-	title Шаблон блога
+	title Шаблон кейса
 	meta(name="description", content="Описание страницы")
 
 block header
@@ -10,10 +10,10 @@ block footer
 	+footer()
 block content
 	main.main
-		+breadcrumb([['Главная', '/'], ['Блог', '/blog.html'], ['Почему лучше ставить перегородку, а не стену?']], 'Время чтения: 15 минут')
+		+breadcrumb([['Главная', '/'], ['Кейсы', '/cases.html'], ['Разделили комнаты для семьи с тремя детьми']], 'Время чтения: 15 минут')
 		section.lblog 
 			.container 
-				h1.lblog__title Межкомнатные перегородки в&nbsp;квартире: гипсокартон, дерево или&nbsp;блоки
+				h1.lblog__title Разделили комнаты для семьи с&nbsp;тремя детьми
 				p Из какого материала лучше создавать дополнительные стены, чтобы разделить жилплощадь на разные зоны
 				.lblog__img
 					+picture(jpg, `${assets}blog-i1`, 'n')
