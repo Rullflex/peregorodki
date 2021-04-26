@@ -1,0 +1,64 @@
+extends modules/layout/_layout
+
+prepend head
+	title Blog
+	meta(name="description", content="Описание страницы")
+
+block header
+	+header(7)
+block footer
+	+footer()
+block content
+	main.main
+		+breadcrumb(['Главная', 'Блог'])
+		section.blog 
+			.blog__ibg.cmn-bg
+				+picture('svg', `${assets}s13-bg`, 'sl')
+			.container 
+				.blog__title.h2 Блог
+				.blog__item
+					.blog__item-title Межкомнатные перегородки в&nbsp;квартире: гипсокартон, дерево или блоки
+					.blog__item-flex-wrap
+						.blog__item-descr В статье рассказываю, из чего лучше сделать перегородку: кирпич, гипсокартон или другие материалы 
+						.blog__item-img.ibg 
+							+picture(jpg, `${assets}blog-i1`, 'n')
+					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+
+				.blog__item.blog__item--reverse
+					.blog__item-title Почему лучше ставить перегородку, а не стену?
+					.blog__item-flex-wrap
+						.blog__item-descr В статье рассказываю, почему перегородка – это лучшее решение практически для всех типов квартир...
+						.blog__item-img.ibg 
+							+picture(jpg, `${assets}blog-i2`, 'n')
+					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+
+				.blog__item
+					.blog__item-title Почему лучше ставить перегородку, а не стену?
+					.blog__item-flex-wrap
+						.blog__item-descr В статье рассказываю, из чего лучше сделать перегородку: кирпич, гипсокартон или другие материалы 
+						.blog__item-img.ibg 
+							+picture(jpg, `${assets}blog-i3`, 'n')
+					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+
+				.blog__item.blog__item--reverse
+					.blog__item-title Почему лучше ставить перегородку, а не стену?
+					.blog__item-flex-wrap
+						.blog__item-descr В статье рассказываю, почему перегородка – это лучшее решение практически для всех типов квартир...
+						.blog__item-img.ibg 
+							+picture(jpg, `${assets}blog-i4`, 'n')
+					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+
+				.blog__item
+					.blog__item-title Почему лучше ставить перегородку, а не стену?
+					.blog__item-flex-wrap
+						.blog__item-descr В статье рассказываю, из чего лучше сделать перегородку: кирпич, гипсокартон или другие материалы 
+						.blog__item-img.ibg 
+							+picture(jpg, `${assets}blog-i5`, 'n')
+					a.blog__item-btn.btn.btn-outline-primary(href="#") Читать
+
+		+breadcrumb-bot(['Назад на главную'])
+		
+
+				
+
+

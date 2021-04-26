@@ -15,7 +15,6 @@
     text-transform: none;
     -webkit-appearance: none;
     border-radius: 0;
-    display: inline-block;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
@@ -161,6 +160,20 @@
         }
         &-secondary {
             @include btn-outline(#293B61);
+            font-family: 'Montserrat';
+            font-weight: bold;
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    font-weight: 800;
+                }
+            }
+            &:active {
+                background: linear-gradient(180deg, rgba(41, 59, 97, 0.33) 0%, rgba(29, 169, 227, 0.33) 100%), rgba(41, 59, 97, 0.22) !important;
+                font-weight: 800;
+            }
+        }
+        &-white {
+            @include btn-outline(#ffffff);
             font-family: 'Montserrat';
             font-weight: bold;
             @media (min-width: map-get($grid-breakpoints, lg)) {

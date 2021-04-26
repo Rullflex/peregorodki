@@ -13,4 +13,5 @@ document.addEventListener(`DOMContentLoaded`, function () {
     if (s13_slider != undefined & window.innerWidth < app.lg) {
         UIkit.slider(s13_slider)
     }
+
 })

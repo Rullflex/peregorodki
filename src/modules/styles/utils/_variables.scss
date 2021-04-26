@@ -55,7 +55,7 @@ $transition--normal: all 300ms $animation-type;
 $transition--slow: all 400ms $animation-type;
 $transition--very-slow: all 500ms $animation-type;
 
-$transition--hover:           all 250ms $animation-type !default;
+$transition--hover:           all 200ms $animation-type !default;
 $transition-base:             all 200ms ease-in-out !default;
 $transition-fade:             opacity 150ms linear !default;
 $transition-collapse:         height 350ms ease !default;

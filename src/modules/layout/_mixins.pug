@@ -2,6 +2,32 @@ include widgets/_header
 include widgets/_footer
 include widgets/_menu
 
+
+//- BREADCRUMB
+mixin breadcrumb(arrayOfLink = [], readTime)
+	ul.breadcrumb&attributes(attributes)
+		.breadcrumb__readtime!= readTime
+		each item, idx in arrayOfLink
+			if idx == arrayOfLink.length - 1
+				li.breadcrumb__item.breadcrumb__item--last
+					span.breadcrumb__link!= item
+			else
+				li.breadcrumb__item
+					a.breadcrumb__link(href="#")= item
+mixin breadcrumb-bot(arrayOfLink = [], readTime)
+	ul.breadcrumb.breadcrumb--bot&attributes(attributes)
+		//- .breadcrumb__readtime!= readTime
+		each item, idx in arrayOfLink
+			li.breadcrumb__item
+				a.breadcrumb__link(href="#")!= item
+//- PLAY BTN
+mixin play-btn(text, vhref = "#video")
+	.play-btn&attributes(attributes)
+		a.play-btn__btn(href=vhref data-uk-toggle="")
+		.play-btn__text 
+			.play-btn__text-p!= text
+
+
 //- POPUP BASE
 
 mixin popup
@@ -142,6 +168,9 @@ mixin icon(icon, filler = 'currentColor')
 		when 'angle-down'
 			svg(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
 				path(d="M21.0206 1.66657L11.5114 9.67432L2.0022 1.66657" stroke=filler stroke-width="4")
+		when 'star'
+			svg(width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M66.8656 44.4165L47.6086 34L66.8656 23.5835C67.9507 22.9965 68.3219 21.6976 67.6957 20.6802L63.1595 13.3184C62.5334 12.3024 61.1464 11.9531 60.0612 12.5402L40.8043 22.9566V2.125C40.8043 0.950938 39.7886 0 38.5362 0H29.4638C28.2114 0 27.1957 0.950938 27.1957 2.125V22.958L7.93875 12.5415C6.85358 11.9545 5.46664 12.3038 4.84047 13.3198L0.304262 20.6802C-0.32191 21.6963 0.0492602 22.9965 1.13444 23.5835L20.3914 34L1.13444 44.4165C0.0492602 45.0035 -0.32191 46.3038 0.304262 47.3198L4.84047 54.6816C5.46664 55.6976 6.85358 56.0455 7.93875 55.4598L27.1957 45.0434V65.875C27.1957 67.0491 28.2114 68 29.4638 68H38.5362C39.7886 68 40.8043 67.0491 40.8043 65.875V45.042L60.0612 55.4585C61.1464 56.0455 62.5334 55.6976 63.1595 54.6802L67.6957 47.3184C68.3219 46.3024 67.9507 45.0035 66.8656 44.4165Z" fill="#019CDD")
 		
 		when 'angle-left'
 			svg(width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)

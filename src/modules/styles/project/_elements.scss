@@ -3,6 +3,8 @@
 @import "./elements/slider";
 @import "./elements/loader";
 @import "./elements/menu";
+@import "./elements/play-btn";
+@import "./elements/breadcrumb";
 
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .container {
@@ -10,7 +12,8 @@
         padding-right: 0;
     }
 }
-.h2 {
+.h2, h1 {
+    font-family: Montserrat;
     font-weight: bold;
     font-size: 1.25rem;
     line-height: 1.1em;
