@@ -2,6 +2,7 @@
    Component: slider-nav
  ========================================================================== */
 .slider-nav {
+    max-width: 100%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +15,10 @@
     }
     .slidenav {
         @include center-item();
+    }
+    .dotnav {
+        max-width: 100%;
+        overflow-x: auto;
     }
 }
 

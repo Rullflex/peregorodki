@@ -1,28 +1,37 @@
-.lblog {
+.lt {
     padding-top: 1.6875rem;
     padding-bottom: 1.875rem;
 
     font-family: Raleway;
+    font-size: 0.75rem;
+    line-height: 1.4em;
+    color: #434343;
 
     @include bg(#FBFBFB);
     &__title {
         text-align: left;
         margin-bottom: 0.875rem;
     }
-    h2 {
+    h2:not([class]) {
         font-weight: bold;
         font-size: 1.125rem;
         line-height: 1.1em;
         color: #113D78;
         margin: 0.5rem 0 0.3125rem;
     }
-    p {
-        font-size: 0.75rem;
-        line-height: 1.4em;
-        color: #434343;
+    p:not([class]) {
         margin-top: 0.3125rem;
         margin-bottom: 1.125rem;
     }
+    ul:not([class]) {
+        margin-bottom: 0.75rem;
+        li {
+            &::before {
+                content: '– ';
+            }
+        }
+    }
+
     &__img {
         width: 100%;
         height: 10.3125rem;
@@ -61,9 +70,34 @@
             object-fit: cover;
         }
     }
+    &__slider {
+        width: 100%;
+        font-family: Raleway;
+        position: relative;
+        &-item {
+            border-radius: 0.25rem;
+            width: 100%;
+            height: 10.3125rem;
+            position: relative;
+            margin-right: 0.625rem;
+
+            overflow: hidden;
+            background: #eee;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+    }
     &__compare {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-bottom: 1.25rem;
         &-title {
             font-weight: 800;
@@ -95,7 +129,7 @@
         }
         &-pluses {
             width: 9.0625rem;
-            .lblog__compare {
+            .lt__compare {
                 &-title {
                     color: #019CDD;
                 }
@@ -110,7 +144,7 @@
         }
         &-minuses {
             width: 9.0625rem;
-            .lblog__compare {
+            .lt__compare {
                 &-title {
                     color: #ED1726;
                 }
@@ -123,12 +157,33 @@
                 }
             }
         }
+        &-image {
+            width: 7.5625rem;
+            height: 6.25rem;
+            border-radius: 0.25rem;
+
+            margin-right: 0.75rem;
+
+            position: relative;
+            overflow: hidden;
+            background: #eee;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
     }
 }
 @media (min-width: map-get($grid-breakpoints, lg)) {
-    .lblog {
+    .lt {
         padding-top: 73px;
         padding-bottom: 70px;
+
+        font-size: 25px;
         .container {
             max-width: 1136px;
         }
@@ -136,18 +191,26 @@
             font-weight: bold;
             margin-bottom: 29px;
         }
-        h2 {
+        h2:not([class]) {
             font-size: 40px;
             margin: 121px 0 22px;
         }
-        p {
+        p:not([class]) {
             max-width: 1072px;
-            font-size: 25px;
             margin-top: 0.7rem;
             margin-bottom: 35px;
         }
+        
+        ul:not([class]) {
+            max-width: 1072px;
+            margin-bottom: 48px;
+            li {
+                &::before {
+                    content: '– ';
+                }
+            }
+        }
         &__img {
-            width: 1136px;
             height: 630px;
             box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
@@ -162,15 +225,22 @@
             }
         }
         &__video {
-            width: 1136px;
             height: 630px;
             box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
             margin-bottom: 60px;
             img {}
         }
+        &__slider {
+            &-item {
+                border-radius: 10px;
+                height: 630px;
+                margin-right: 20px;
+                img {}
+            }
+        }
         &__compare {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
             &-title {
                 font-size: 30px;
                 line-height: 35px;
@@ -190,7 +260,7 @@
             }
             &-pluses {
                 width: 500px;
-                .lblog__compare {
+                .lt__compare {
                     &-title {
                     }
                     &-item {
@@ -202,7 +272,7 @@
             }
             &-minuses {
                 width: 500px;
-                .lblog__compare {
+                .lt__compare {
                     &-title {
                     }
                     &-item {
@@ -211,6 +281,14 @@
                         }
                     }
                 }
+            }
+            &-image {
+                width: 570px;
+                height: 380px;
+                border-radius: 10px;
+                margin-right: 0;
+    
+                img {}
             }
         }
     }
