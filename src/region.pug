@@ -1,0 +1,93 @@
+extends modules/layout/_layout
+
+prepend head
+	title Региональные представители
+	meta(name="description", content="Описание страницы")
+
+block header
+	+header(6)
+block footer
+	+footer()
+block content
+	main.main
+		section.s22
+			.container 
+				+picture(jpg, `${assets}s22-bg`, 'n').d-none.d-lg-block.s22__bg
+				.s22__title.h2 Региональные представители
+				.s22__block.s22__block--1
+					+picture(png, `${assets}s12-bridge-bg`, 'n').s22__block-img.s22__block-img-bridge
+					.s22__persones
+						.s22__persone
+							.s22__persone-face.ibg 
+								+picture(png, `${assets}s13-face-1`, 'n')
+							.s22__persone-contacts
+								.s22__persone-name Ряхин Максим Сергеевич
+								a.s22__persone-phone(href="tel:+7 967 595 3314") +7 967 595 3314
+						.s22__persone
+							.s22__persone-face.ibg 
+								+picture(png, `${assets}s13-face-2`, 'n')
+							.s22__persone-contacts
+								.s22__persone-name Ряхин Сергей
+								a.s22__persone-phone(href="tel:+7 905 222 3877") +7 905 222 3877
+					.s22__exhib
+						.s22__exhib-title Выставка:
+						.s22__exhib-adress г. Санкт-Петербург, Московское шоссе, д.7а
+					.s22__contacts 
+						.s22__contacts-mail
+							.s22__contacts-mail-title Почта:
+							.s22__contacts-mail-adress masterhelp78@yandex.ru
+						.s22__contacts-socials
+							a.s22__contacts-item(href="#", target="_blank", rel="noopener noreferrer")
+								img.lazyload(src=`${assetsIco}inst-dsh.svg`, alt="").s22__contacts-img
+								.s22__contacts-link @spb_gorod_masterov
+							a.s22__contacts-item(href="https://www.vk.com/gorod_masteerov", target="_blank", rel="noopener noreferrer")
+								img.lazyload(src=`${assetsIco}vk.svg`, alt="").s22__contacts-img
+								.s22__contacts-link vk.com/gorod_masteerov
+				
+				.s22__block.s22__block--2
+					+picture(png, `${assets}s12-temple-bg`, 'n').s22__block-img.s22__block-img-temple
+					.s22__persones
+						.s22__persone
+							.s22__persone-face.ibg 
+								+picture(png, `${assets}s13-face-3`, 'n')
+							.s22__persone-contacts
+								.s22__persone-name Сбоев Дмитрий
+								a.s22__persone-phone(href="tel:+7 962 220 3876") +7 962 220 3876
+					.s22__exhib
+						.s22__exhib-title Выставка:
+						.s22__exhib-adress г. Хабаровск, Железнодорожный район, проспект 60-летия Октября, ТЦ Стройка 1 этаж, 152, 680014
+					.s22__contacts 
+						.s22__contacts-mail
+							.s22__contacts-mail-title Почта:
+							.s22__contacts-mail-adress sboev.dv@mail.ru
+						.s22__contacts-socials
+							a.s22__contacts-item(href="#", target="_blank", rel="noopener noreferrer")
+								img.lazyload(src=`${assetsIco}inst-dsh.svg`, alt="").s22__contacts-img
+								.s22__contacts-link @dveriservisdv
+							a.s22__contacts-item(href="https://www.ds-dv.ru", target="_blank", rel="noopener noreferrer")
+								img.lazyload(src=`${assetsIco}swift.svg`, alt="").s22__contacts-img
+								.s22__contacts-link ds-dv.ru
+				
+				.s22__block.s22__block--3
+					+picture(png, `${assets}city-bg`, 'n').s22__block-img.s22__block-img-city
+					.s22__persones
+						.s22__persone
+							.s22__persone-face.ibg 
+								+picture(png, `${assets}s13-face-3`, 'n')
+							.s22__persone-contacts
+								.s22__persone-name Ганин Константин
+								a.s22__persone-phone(href="tel:+7 967 595 3314") +7 967 595 3314
+								.s22__persone-town г. Владивосток
+					//- .s22__exhib
+						.s22__exhib-title Выставка:
+						.s22__exhib-adress г. Хабаровск, Железнодорожный район, проспект 60-летия Октября, ТЦ Стройка 1 этаж, 152, 680014
+					.s22__contacts 
+						.s22__contacts-mail
+							.s22__contacts-mail-title Почта:
+							.s22__contacts-mail-adress ganin123@yandex.ru
+						.s22__contacts-socials
+							a.s22__contacts-item(href="#", target="_blank", rel="noopener noreferrer")
+								img.lazyload(src=`${assetsIco}inst-dsh.svg`, alt="").s22__contacts-img
+								.s22__contacts-link @dveri_konstantin_vl
+						
+
