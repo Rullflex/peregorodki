@@ -18,7 +18,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
         UIkit.scrollspy($virtualWrapper)
         $virtualWrapper.addEventListener(`inview`, () => {
             $virtualWrapper.insertAdjacentHTML(`beforeend`, app.loaderHtml)
-            $virtualWrapper.insertAdjacentHTML(`beforeend`, `<iframe src="/virtual/index.html" scrolling='no' frameborder="0" allowfullscreen="true" data-uk-responsive"></iframe>`)
+            $virtualWrapper.insertAdjacentHTML(`beforeend`, `<iframe src="https://hafizovtimur.ru/virtual/index.html" scrolling='no' frameborder="0" allowfullscreen="true" data-uk-responsive"></iframe>`)
         })
     }
 
