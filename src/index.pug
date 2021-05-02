@@ -34,7 +34,7 @@ block content
 					.s1__video-text Посмотрите минутную#[br] видео-презентацию#[br] нашей работы
 					.btn-solid-wrap 	
 						.btn-solid-red-sub
-						a.s1__video-btn.btn.btn-solid-red(href="#video" data-uk-toggle)
+						a.s1__video-btn.btn.btn-solid-red(href="#_5Tw1z5i_Bg8" data-app-video)
 							+icon('play-btn')
 							span Смотреть
 				.s1__tour 
@@ -43,7 +43,7 @@ block content
 						.s1__tour-text Посмотрите 3D-тур#[br] с раздвижными перегородками
 					.btn-solid-wrap 
 						.btn-solid-primary-sub
-						a.s1__tour-btn.btn.btn-solid-primary Смотреть 3D тур
+						a.s1__tour-btn.btn.btn-solid-primary(href="#virtual" data-uk-toggle) Смотреть 3D тур
 		section.s2 
 			.container
 				.s2__title.h2 Вместе#[br.d-lg-none] выгодней
@@ -70,8 +70,8 @@ block content
 								.s2__side-point Установка конструкции
 						.s2__side-divider 
 						.s2__side-price 125 000
-						a.s2__side-btn.btn.btn-outline-primary Получить консультацию
-		section.s3
+						a.s2__side-btn.btn.btn-outline-primary(href="#callback" data-uk-toggle) Получить консультацию
+		//- section.s3
 			.s3__container.container
 				.s3__title.h2 Раздвижные перегородки&nbsp;позволяют
 				.s3__block
@@ -131,7 +131,7 @@ block content
 					.s4__item.s4__item--last.ibg 
 						+picture(jpg, `${assets}s4-i8`, 'n')
 						.s4__item-text.s4__item-text--last Узнайте больше о&nbsp;видах&nbsp;раздвижных перегородок
-						a.s4__item-btn.btn.btn-outline-secondary(href="#") Посмотреть
+						a.s4__item-btn.btn.btn-outline-secondary(href="/about.html") Посмотреть
 		section.s5 
 			.container 
 				.s5__title.h2 Подберём наиболее подходящий&nbsp;вариант покрытия
@@ -250,6 +250,7 @@ block content
 					.btn-solid-wrap 
 						.btn-solid-red-sub
 						button.capture__form-btn.btn.btn-solid-red(type="submit") ОСТАВИТЬ ЗАЯВКУ
+					.capture__form-policy Нажимая на кнопку, я соглашаюсь с&nbsp;#[a(href=privacyLink) политикой конфиденциальности]
 		section.s8 
 			.container
 				.s8__title.h2 В нашей команде –#[br.d-lg-none] #[strong только проверенные грамотные специалисты]
@@ -262,7 +263,7 @@ block content
 					+picture(png, `${assets}s8-drill`, 'n').s8__point-img
 					.s8__point-text Наша команда использует только качественные инструменты
 				.s8__descr Весь инструментарий наших монтажников состоит#[br] из #[strong инструментов премиум-сегмента] японских и американских фирм #[strong стоимостью более 1 млн рублей]
-				a.s8__btn.btn.btn-outline-primary(href="#") Получить консультацию
+				a.s8__btn.btn.btn-outline-primary(href="#callback" data-uk-toggle) Подробнее о команде
 		section.s9 
 			.container 
 				+picture(png, `${assets}s9-bg`).s9__img-bg
@@ -279,7 +280,7 @@ block content
 					p #[strong А уже в 2012 году] у меня родился сын,#[br] и #[strong через месяц я открыл свой первый магазин — #[b "Добротные двери"].]
 				.btn-solid-wrap.s9__btn-wrap 
 					.btn-solid-primary-sub
-					a.s9__btn.btn.btn-solid-primary(href="#") Читать продолжение
+					a.s9__btn.btn.btn-solid-primary(href="/blog-layout.html") Читать продолжение
 		section.s10 
 			.s10__container.container
 				.s10__block
@@ -287,7 +288,7 @@ block content
 					.s10__ibg.ibg 
 						+picture(jpg, `${assets}s10-fam`, 'n')
 					.s10__play 
-						a.s10__play-btn(href="#video" data-uk-toggle)
+						a.s10__play-btn(href="#_0I7rYotTip4" data-app-video)
 						.s10__play-text 
 							p Смотреть видео отзыв
 					.s10__descr
@@ -348,6 +349,7 @@ block content
 					.btn-solid-wrap 
 						.btn-solid-primary-sub
 						button.capture__form-btn.btn.btn-solid-primary(type="submit") Оставить заявку
+					.capture__form-policy Нажимая на кнопку, я соглашаюсь с&nbsp;#[a(href=privacyLink) политикой конфиденциальности]
 
 				
 

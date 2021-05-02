@@ -1,49 +1,177 @@
 .popup {
-    padding: 1rem 0;
+    padding: 0 !important;
 	background: rgba(0,0,0,.6);
     &__body {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
         width: 20rem;
-        // margin-top: 0 !important; 
+        height: 100vh;
+        border-radius: 0.25rem;
+        overflow: hidden;
     }
     &__close {
-        color: $primary;
-        right: 0.5rem;
+        color: white;
+        top: 1rem;
+        right: 1rem;
         svg {
             width: 1rem;
         }
     }
-    &__title {}
-    &__subtitle {}
-}
-@media (min-width: map-get($grid-breakpoints, md)) {
-    .popup {
-        padding: 2.5rem;
-        &__body {}
-        &__close {
-            right: -2rem;
-            top: -2rem;
-            svg {
-                width: 1.5rem;
+    &__ibg {
+        width: 100%;
+        height: 100%;
+        background: #1B2A4A;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 10.9375rem;
+            background: linear-gradient(180deg, #19449F 0%, rgba(25, 68, 159, 0) 105.59%);
+            mix-blend-mode: hard-light;
+            opacity: 0.77;
+            position: absolute;
+            top: 0;
+            left: 0;            
+        }
+    }
+    &__title {
+        max-width: 15.875rem;
+        font-weight: bold;
+        font-size: 1.375rem;
+        line-height: 1.1em;
+        text-align: center;
+        color: #F85C62;
+
+        // margin-top: 6.75rem;
+        margin-bottom: 1.375rem;
+        &--lg {
+            font-weight: bold;
+            font-size: 1.875rem;
+            line-height: 1.1em;
+            text-align: center;
+            color: #F85C62;
+
+            // margin-top: 9.375rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__subtitle {
+        width: 15.125rem;   
+        font-size: 1rem;
+        line-height: 1.2em;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 2.125rem;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-btn {
+            width: 13.125rem;
+            line-height: 3.625rem;
+            font-size: 0.625rem;
+        }
+        &-policy {
+            width: 9.3rem;
+            color: #A6AEBD;
+            font-size: 0.5rem;
+            line-height: 0.625rem;
+            text-align: center;
+            margin: 0.75rem auto 0;
+            a {
+                text-decoration-line: underline;
+                color: #019CDD;
             }
         }
-        &__title {}
-        &__subtitle {}
+        .input-wrap {
+            margin-bottom: 1.575rem;
+        }
     }
 }
+
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .popup {
-        &__body {}
+        padding: 0;
+        &__body {
+            width: 1539px;
+            height: 530px;
+            border-radius: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
         &__close {
-            right: 1rem;
-            top: 1rem;
+            right: 168px;
+            top: 50px;
+            color: #76819A;
             svg {
-                width: 1.5rem;
+                width: 20px;
             }
             &:hover {
-                color: $primary;
+                color: white;
             }
         }
-        &__title {}
-        &__subtitle {}
+        &__ibg {
+            &::after {
+                content: none;            
+            }
+        }
+        &__title {
+            max-width: 1094px;
+            font-size: 55px;
+            line-height: 67px;
+            
+            margin-top: -30px;
+            margin-bottom: 63px;
+            &--lg {
+                font-size: 55px;
+                line-height: 67px;
+                margin-bottom: 15px;
+            }
+        }
+        &__subtitle {
+            width: 843px;  
+            font-size: 35px;
+            line-height: 43px;
+            margin-bottom: 51px;
+        }
+        &__form {
+            width: 1213px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            &-btn {
+                width: 350px;
+                line-height: 80px;
+                font-size: 18px;
+            }
+            &-policy {
+                width: 260px;
+                font-size: 14px;
+                line-height: 18px;
+                margin: 0;
+                position: absolute;
+                right: 41px;
+                bottom: -41px;
+            
+                a {
+                    text-decoration-line: underline;
+                    color: #019CDD;
+                }
+            }
+            .input-wrap {
+                margin-bottom: 0;
+            }
+        }
     }
+    
 }

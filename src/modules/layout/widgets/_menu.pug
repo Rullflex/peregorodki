@@ -8,11 +8,11 @@ mixin menu
                         +icon('logo').menu__logo-icon
                     .menu__logo-text Изготовление и установка раздвижных перегородок по всей России
                 a.menu__tel(href=phoneLink)!= phoneNumber
-                a.menu__btn.btn.btn-outline-primary() Заказать звонок
+                a.menu__btn.btn.btn-outline-primary(href="#callback" data-uk-toggle="") Заказать звонок
                 .menu__nav
                     a.menu__nav-link.active(href="/") Главная 
                     a.menu__nav-link(href="/about.html") Каталог 
-                    a.menu__nav-link(href="/professionals.html") Этапы работы
+                    a.menu__nav-link(href="/professionals.html") Производство
                     a.menu__nav-link(href="/tools.html") Отзывы
                     a.menu__nav-link(href="/cases.html") Кейсы
                     a.menu__nav-link(href="/region.html") Региональные представители

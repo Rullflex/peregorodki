@@ -1,5 +1,5 @@
 mixin header(active = 0)
-    header.header&attributes(attributes) 
+    header.header(data-uk-sticky="top: 100vh; animation: uk-animation-slide-top")&attributes(attributes) 
         .header__container.container 
             .header__top 
                 .header__logo-wrap 
@@ -8,14 +8,14 @@ mixin header(active = 0)
                     .header__logo-text Изготовление и установка раздвижных перегородок по всей России
                 .header__right
                     a.header__tel(href=phoneLink)!= phoneNumber
-                    a.header__btn.btn.btn-outline-primary() Заказать звонок
-                    +menu
+                    a.header__btn.btn.btn-outline-primary(href="#callback" data-uk-toggle="") Заказать звонок
+                +menu
                 
             .header__nav
                 a.header__nav-link(href="/" class=`${active == 1 ? 'active' : ''}`)
                     +icon('home')
                 a.header__nav-link(href="/about.html" class=`${active == 2 ? 'active' : ''}`) Каталог 
-                a.header__nav-link(href="/professionals.html" class=`${active == 3 ? 'active' : ''}`) Этапы работы
+                a.header__nav-link(href="/professionals.html" class=`${active == 3 ? 'active' : ''}`) Производство
                 a.header__nav-link(href="/tools.html" class=`${active == 4 ? 'active' : ''}`) Отзывы
                 a.header__nav-link(href="/cases.html" class=`${active == 5 ? 'active' : ''}`) Кейсы
                 a.header__nav-link(href="/region.html" class=`${active == 6 ? 'active' : ''}`) Региональные представители

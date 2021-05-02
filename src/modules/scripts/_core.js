@@ -26,13 +26,7 @@ class App {
         </div>`;
     }
 
-    init() {
-        // FORM
-        const form = new Form()
-        form.init()
-        
-
-    }
+    init() {}
 
     // plural(number, ['год', 'года', 'лет'])
     plural(number, titles) {
@@ -101,7 +95,6 @@ class App {
                 $videoWrapper.insertAdjacentHTML(`beforeend`, `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${YTid}" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
             })
         }
-       
     }
 
     // поздагрузка Google карты внутрь блока только при его появлении
@@ -120,6 +113,37 @@ class App {
                 $mapWrapper.insertAdjacentHTML(`beforeend`, `<iframe src="${mapSrc}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`)
             })
         }
+    }
+
+    dynamicVideo(toggleSelector = '[data-app-video]') {
+        document.querySelectorAll(toggleSelector)?.forEach(el => {
+            el.addEventListener('click', ev => {
+                ev.preventDefault()
+
+                const id = el.getAttribute('href'),
+                      hash = el.getAttribute('href').slice(1),
+                      ythash = hash.startsWith('_') ? hash.slice(1) : hash
+                
+
+                document.querySelector(`.app-wrapper`).insertAdjacentHTML(
+                    'beforeend',
+                    `<div class="popup-video popup uk-flex-top uk-modal" id="${hash}">
+                        <div class="popup__body uk-modal-dialog uk-modal-body uk-margin-auto-vertical embed-responsive embed-responsive-16by9">
+                            <button class="popup__close uk-modal-close-default uk-icon uk-close" type="button" data-uk-close="data-uk-close"></button>
+                        </div>
+                    </div>`
+                )
+                this.videoSpy(`${id} .popup__body`, ythash)
+                 
+                UIkit.modal(id)
+                setTimeout(() => UIkit.modal(id).show(), 100)
+    
+                el.addEventListener('click', ev => {
+                    ev.preventDefault()
+                    UIkit.modal(id).show()
+                })
+            }, {once: true})
+        })
     }
 
     // маска для телефонов
@@ -228,14 +252,12 @@ class App {
 }
 
 class Quiz extends App {
-    constructor({
-        selector,
+    constructor(quiz, {
         autoMoveDelay = 0,
         activeClass = `quiz-active`,
         startSlide = 0
     } = {}) {
         super()
-        this.selector = selector
         this.autoMoveDelay = autoMoveDelay
         this.activeClass = activeClass
 
@@ -247,7 +269,6 @@ class Quiz extends App {
         this.quiz = document.querySelector(this.selector)
 
     }
-
     create () {
         this.toSlide(this.currentSlide)
 

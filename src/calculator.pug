@@ -1,0 +1,103 @@
+extends modules/layout/_layout
+
+prepend head
+	title Калькулятор
+	meta(name="description", content="Описание страницы")
+
+block header
+	+header(8)
+block footer
+	+footer()
+block content
+	main.main
+		section.scalc
+			.scalc__ibg.cmn-bg 
+				+picture('svg', `${assets}s14-bg`)
+			.container 
+				h1.scalc__title.h2 Расчет стоимости раздвижной перегородки: 
+				.calc
+					ul.calc-switcher.d-none(data-uk-switcher="animation: uk-animation-slide-right-small, uk-animation-slide-left-small; swiping: false")
+						- for (var i = 1; i <=5; i++)
+							li #[a(href="#")]
+					ul.calc__items.uk-switcher 
+						li.calc__item
+							.calc__title Выберите стекло:
+							.calc__img.ibg 
+								+picture(jpg, `${assets}s3-i4`, 'n')
+							.calc__radios
+								a.calc__radio(href="#") Прозрачное или матовое стекло
+								a.calc__radio.active(href="#") Тонированное стекло  (бронза или графит) 
+								a.calc__radio(href="#") Матовое тонированное стекло (бронза или графит)
+								a.calc__radio(href="#") Зеркало
+								a.calc__radio(href="#") Зеркало + плёнка или МДФ
+								a.calc__radio(href="#") Зеркало (бронза, серое и др.) 
+								a.calc__radio(href="#") Зеркальная тонировочная плёнка 
+								a.calc__radio(href="#") Матировка с 2- сторон (пескоструй) + модификатор
+								a.calc__radio(href="#") МДФ двухсторонний
+								a.calc__radio(href="#") Фрезеровка на МДФ 
+								a.calc__radio(href="#") Лазерная фрезеровка на стекле или зеркале + плёнка
+								a.calc__radio(href="#") Фацет
+						li.calc__item
+							.calc__title Экошпон или эмаль?
+							.calc__img.ibg 
+								+picture(jpg, `${assets}s3-i4`, 'n')
+							.calc__descr #[strong Экошпон] — это многослойный материал, который получается из древесных волокон и синтетического связующего. Повторяет рельеф и цвет настоящего древесного массива. Отлично подходит для людей, в чьём жилище присутствуют домашние животные или маленькие дети.
+							.calc__descr #[strong Эмалевые краски (эмали)] — лакокрасочные материалы. Большой выбор цветов, защищают от&nbsp;плесени и развития коррозии, что повышает срок эксплуатации.
+							.calc__radios
+								a.calc__radio.active(href="#") Экошпон
+								a.calc__radio(href="#") Эмаль
+							.calc__star 
+								+icon('star')
+								.calc__star-text Для фрезерофки экошпон применить нельзя. Значит, этот шаг алгоритм будет пропускать, если в первом выбрана она.
+						li.calc__item
+							.calc__title.calc__title--left Площадь покрытия
+							.calc__subtitle Стоимость считается за 1 м2
+							.input-wrap 
+								input.calc__input.input(type="text" placeholder="Укажите площадь (м2)")
+						li.calc__item.calc__item--4
+							.calc__title.calc__title--left Дополнительные функции
+							.calc__flex
+								.calc__star 
+									+icon('star')
+									.calc__star-text Данный выбор оплачивается отдельно.
+								.calc__img.ibg.calc__img--sm
+									+picture(jpg, `${assets}s3-i4`, 'n')
+							.calc__radios
+								a.calc__radio(href="#") Доводчики (в две стороны)
+								a.calc__radio.active(href="#") Синхромеханизм, 2 створки#[br] (ролики, направляющие, тросы) 
+								a.calc__radio(href="#") Синхромеханизм, 3 створки, каскад#[br] (ролики, направляющие, тросы) 
+								a.calc__radio(href="#") Нет, не хочу
+						li.calc__item
+							.calc__title.calc__title--left Результаты подсчетов
+							.calc__sum
+								.calc__sum-text Примерная сумма:
+								.calc__sum-price 125 000
+							.calc__descr.calc__descr--lg Часто бывает так, что подсчёты клиентов могут быть не совсем точными. Чтобы не вводить вас в заблуждение, мы указываем примерную стоимость работ. 
+							.calc__descr.calc__descr--lg Точную сумму вы сможете узнать при общении с нашим менеджером.#[br] Оставьте данные ниже, и он свяжется с вами для бесплатной консультации. 
+							form.calc__form(action="#")
+								.input-wrap.input-wrap--dark
+									label.input-label Имя
+									input.input(type="text" name="Имя")
+								.input-wrap.input-wrap-dark 
+									label.input-label Телефон
+									input.input.phone(type="tel" name="Телефон")
+								.calc-form-values.d-none
+								.calc__form-btns 
+									a.calc__form-prev.calc__prev(href="#") 
+										+icon('angle-left')
+									.btn-solid-wrap
+										.btn-solid-primary-sub
+										button(type="submit").calc__form-next.btn.btn-solid-primary
+											span Оставить заявку
+											+icon('angle-right')
+									.calc__form-policy Нажимая на кнопку, я соглашаюсь с&nbsp;#[a(href=privacyLink) политикой конфиденциальности]
+					//- calc btns
+					.calc__btns 
+						a.calc__btn.calc__prev.btn.btn-outline-primary(href="#") 
+							+icon('angle-left')
+							span Предыдущий шаг
+						.btn-solid-wrap
+							.btn-solid-primary-sub
+							a.calc__btn.calc__next.btn.btn-solid-primary(href="#")
+								span Следующий шаг
+								+icon('angle-right')

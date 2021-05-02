@@ -19,10 +19,15 @@ mixin breadcrumb-bot(arrayOfLinks = [])
 		each item, idx in arrayOfLinks
 			li.breadcrumb__item
 				a.breadcrumb__link(href=item[1])!= item[0]
+mixin breadcrumb-bot-100vw(arrayOfLinks = [])
+	ul.breadcrumb.breadcrumb--100vw&attributes(attributes)
+		each item, idx in arrayOfLinks
+			li.breadcrumb__item
+				a.breadcrumb__link(href=item[1])!= item[0]
 //- PLAY BTN
-mixin play-btn(text, vhref = "#video")
+mixin play-btn(text, vhref = "#_0I7rYotTip4")
 	.play-btn&attributes(attributes)
-		a.play-btn__btn(href=vhref data-uk-toggle="")
+		a.play-btn__btn(href=vhref data-app-video)
 		.play-btn__text 
 			.play-btn__text-p!= text
 
@@ -35,7 +40,7 @@ mixin popup
 			button.popup__close.uk-modal-close-default(type="button" data-uk-close)
 			block
 
-mixin popup-video-16-9
+mixin popup-16-9
 	.popup-video.popup.uk-flex-top(data-uk-modal)&attributes(attributes)
 		.popup__body.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical.embed-responsive.embed-responsive-16by9
 			button.popup__close.uk-modal-close-default(type="button" data-uk-close)
